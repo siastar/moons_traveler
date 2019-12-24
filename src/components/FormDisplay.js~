@@ -1,0 +1,27 @@
+import React, {Component} from 'react'
+
+
+function FormDisplay (props){
+    // FormContainer sends props to FormComponent
+    // props contains the method "changeHandler" and the object "data"
+    // console.log('FormDisplay.js now received props:', props);
+    return (
+        <main>
+          <hr/>
+          <div>        
+            <h2>Entered information:</h2>
+            <p>Your name: {props.data.firstName} {props.data.lastName} </p>
+            <p>Your age: {props.data.age} </p>
+            <p>Your gender: {props.data.gender} </p>
+            <p>Your destination: {props.data.destination} </p>
+            <p><b>YOUR DIETARY RESTRICTIONS:</b> 
+              <p>Bucatini: {props.data.noBucatini ? 'yes' : 'no'} </p> 
+              <p>Rigatoni: {props.data.noRigatoni ? 'yes' : 'no'} </p>
+              <p>Carbonara: {props.data.noCarbonara ? 'yes' : 'no'} </p>
+            </p>
+          </div>
+        </main>
+        )  
+};
+
+export default FormDisplay

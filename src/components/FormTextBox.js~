@@ -1,0 +1,24 @@
+import React, {Component} from 'react'
+
+function FormTextBox (props){
+    // FormContainer sends props to FormComponent
+    // props contains the method "changeHandler" and the object "data"
+    console.log('FormTextBox.js now received props:', props);
+    return (
+        <main>
+          <hr/>
+          <form>
+            <label> NOTES
+            <br />
+              <textarea
+                name='notes'
+                value={props.data.text}
+                onChange={props.changesHandler}
+              />
+            </label>
+          </form>
+        </main>
+        )  
+};
+
+export default FormTextBox

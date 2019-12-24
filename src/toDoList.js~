@@ -1,0 +1,34 @@
+const toDoList = [
+    {
+        id: 1,
+        text: "learn a song",
+        expiration:"10/05/2020",
+        completed: true
+    },
+    {
+        id: 2,
+        text: "go to the beach",
+        expiration:"10/05/2020",
+        completed: false
+    },
+    {
+        id: 3,
+        text: "say hello",
+        expiration:"10/05/2020",
+        completed: false
+    },
+    {
+        id: 4,
+        text: "have fun",
+        expiration:"10/05/2020",
+        completed: true
+    },
+    {
+        id: 5,
+        text: "become an astronaut",
+        expiration:"10/05/2020",
+        completed: false
+    }
+]
+
+export default toDoList

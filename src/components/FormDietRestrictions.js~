@@ -1,0 +1,46 @@
+import React, {Component} from 'react'
+
+
+function FormDietRestrictions (props){
+    // FormContainer sends props to FormComponent
+    // props contains the method "changeHandler" and the object "data"
+    console.log('FormDietRestrictions.js now received props:', props);
+    return (
+        <main>
+          <hr/>
+          <form>
+            <label>
+              <b>DIETARY RESTRICTIONS</b>
+              <br />                    
+              <label>
+                <input
+                  type='checkbox'
+                  name='noBucatini'
+                  onChange={props.changeHandler}
+                  checked={props.data.noBucatini}
+                />Bucatini                
+              </label>                   
+              <br />
+              <label>
+                <input
+                  type='checkbox'
+                  name='noRigatoni'
+                  onChange={props.changeHandler}
+                  checked={props.data.noRigatoni}
+                />Rigatoni
+              </label>                    
+              <br />
+              <label>
+                <input
+                  type='checkbox'
+                  name='noCarbonara'
+                  onChange={props.changeHandler}
+                  checked={props.data.noCarbonara}
+                />Carbonara
+              </label>
+            </label>
+          </form>
+        </main>
+        )  
+};
+export default FormDietRestrictions

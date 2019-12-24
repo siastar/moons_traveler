@@ -1,0 +1,21 @@
+import React from 'react';
+
+// toDoItem is the single card which contains the task
+
+function ToDoItem(props) {
+    console.log('props are the attributes defined in App.js for the ToDoItem component ', props);
+    return(
+	<div  className='todo-item' >
+          <input type='checkbox'
+                 checked={props.itemToShow.completed}                
+                 onChange={() => props.changeHandler(props.itemToShow.id)}/> {/*comment: changeHandler is in the App.js and is passed as a prop */}
+
+          <p>id: {props.itemToShow.id}</p>
+          <p>todo: {props.itemToShow.text}</p>
+          <p>expiration: {props.itemToShow.expiration}</p>
+          <p>completed: {props.itemToShow.completed}</p>        
+        </div>
+    )
+}
+export default ToDoItem;
+
